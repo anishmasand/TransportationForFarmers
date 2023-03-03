@@ -37,15 +37,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'transport.apps.TransportConfig'
+    'transport.apps.TransportConfig',
     
     
     'django.contrib.sites',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-     'allauth.socialaccount.providers.google', 
+  #  'allauth',
+   # 'allauth.account',
+    #'allauth.socialaccount',
+     #'allauth.socialaccount.providers.google', 
 ]
 
 SITE_ID = 1
@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'transportation_for_farmer.wsgi.application'
 DATABASES = {
    'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'schema_name',  
-        'USER': 'mqsql_db_name',  
-        'PASSWORD': 'db_password',  
+        'NAME': 'crime_management',  
+        'USER': 'anishmasand',  
+        'PASSWORD': '123456789',  
         'HOST': '127.0.0.1',  
         'PORT': '3306',  
         'OPTIONS': {  
@@ -102,10 +102,10 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
     
     # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
+    #'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
+    #'allauth.account.auth_backends.AuthenticationBackend',
    
 ]
 
