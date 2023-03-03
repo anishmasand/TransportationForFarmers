@@ -74,7 +74,8 @@
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     border-radius: 7%;
                 ">
-                    <form action="registration.html" method="post">
+                    <form href="{% url 'registerDriver' %}" method="post">
+                        {% csrf_token %}
                         <div class="form-group" style=" margin-bottom:30px;">
                             <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
                         </div>
@@ -86,10 +87,10 @@
                         </div>
                        
                         <div class="form-group" style=" margin-bottom:30px;">
-                            <input type="text" class="form-control" name="Phone number" placeholder="Phone number:">
+                            <input type="text" class="form-control" name="mobile" placeholder="Phone number:">
                         </div>
                         <div class="form-group" style=" margin-bottom:30px;">
-                            <input type="text" class="form-control" name="Location" placeholder="Location:">
+                            <input type="text" class="form-control" name="location" placeholder="Location:">
                         </div>
                         <div class="form-group" style=" margin-bottom:30px;">
                             <input type="text" class="form-control" name="license" placeholder="License Number:">

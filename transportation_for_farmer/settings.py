@@ -40,12 +40,12 @@ INSTALLED_APPS = [
     'transport.apps.TransportConfig'
     
     
-    'django.contrib.sites',
+    # 'django.contrib.sites',
 
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-     'allauth.socialaccount.providers.google', 
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    #  'allauth.socialaccount.providers.google', 
 ]
 
 SITE_ID = 1
@@ -88,9 +88,9 @@ WSGI_APPLICATION = 'transportation_for_farmer.wsgi.application'
 DATABASES = {
    'default': {  
         'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'schema_name',  
-        'USER': 'mqsql_db_name',  
-        'PASSWORD': 'db_password',  
+        'NAME': 'transport',  
+        'USER': 'Karina',  
+        'PASSWORD': 'TUHITU',  
         'HOST': '127.0.0.1',  
         'PORT': '3306',  
         'OPTIONS': {  
