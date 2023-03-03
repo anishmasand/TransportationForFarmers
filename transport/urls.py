@@ -7,5 +7,7 @@ urlpatterns=[
     path('signupPage',views.showSignupPage,name="signupPage"),
     path('paymentPage',views.showPaymentPage,name="paymentPage"),
     path('bookingPage',views.showBookingPage,name="bookingPage"),
-    path('accounts/', include('allauth.urls')),
+    path('register',views.registerFarmer,name='registerFarmer'),
+    path('login',views.authenticate,name='login'),
+    # path('accounts/', include('allauth.urls')),
 ]
