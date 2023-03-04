@@ -32,44 +32,40 @@ def registerFarmer(request):
     location=request.POST['location']
     supply_capacity=request.POST['supply_capacity']
     #hashed password
-    hashed_password=make_password(password)
-    farmer=Farmer(name=fullname,email=email,password=hashed_password,mobile=mobile,location=location,supply_capacity=supply_capacity)
+    # hashed_password=make_password(password)
+    farmer=Farmer(name=fullname,email=email,password=password,mobile=mobile,location=location,supply_capacity=supply_capacity)
     farmer.save()
     return render(request,'transport/loginPage.html')
 
-def authenticateFarmer(request):
-    print("helloo")
-    email=request.POST.get('email')
-    password=request.POST.get('password')
-    response=Farmer.objects.get(email=email)[0]
+def authenticate(request):
+    # print("helloo")
+    email=request.POST['email']
+    password=request.POST['password']
+    response=Farmer.objects.filter(email=email,password=password)
     print(response)
     if(response):
-        if(check_password(password,response.password)):
-            print("successfull")
-            # return render(request,"transport/bookingPage.html")
+        return render(request,"transport/bookingPage.html")
     print("failed")
-    # return render(request,"transport/errorPage.html")
+    return render(request,"transport/errorPage.html")
 
 def registerDriver(request):
+    print("hello")
     fullname=request.POST['fullname']
     email=request.POST['email']
     password=request.POST['password']
     mobile=request.POST['mobile']
-    location=request.POST['location']
+    rating=request.POST['rating']
     license=request.POST['license']
     #hashed password
-    hashed_password=make_password(password)
-    driver=Driver(name=fullname,email=email,password=hashed_password,mobile=mobile,location=location,license_no=license)
+    # hashed_password=make_password(password)
+    driver=Driver(name=fullname,email=email,password=password,mobile=mobile,rating=rating,rides_made=0,license_no=license)
     driver.save()
     return render(request,'transport/loginPageTruck.html')
 
 def authenticateDriver(request):
     email=request.POST.get('email')
     password=request.POST.get('password')
-    response=Driver.objects.get(email=email)[:1]
+    response=Driver.objects.filter(email=email,password=password)
     if(response):
-        if(check_password(password,response.password)):
-            print("successfull")
-            return render(request,"transport/bookingPage.html")
-    print("failed")
+        return render(request,"transport/bookingPage.html")
     return render(request,"transport/errorPage.html")

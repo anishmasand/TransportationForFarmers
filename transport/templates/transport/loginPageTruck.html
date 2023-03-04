@@ -73,7 +73,7 @@
                     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     border-radius: 7%;
                 ">
-                    <form method="post">
+                    <form action="{% url 'authenticateDriver' %}" method="post">
                        {% csrf_token %}
                         <div class="form-group" style=" margin-bottom:30px;">
                             <input type="emaIl" class="form-control" name="email" placeholder="Email:">
