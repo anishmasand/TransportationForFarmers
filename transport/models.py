@@ -17,13 +17,15 @@ class Driver(models.Model):
     rides_made=models.IntegerField()
     rating=models.IntegerField()
     license_no=models.IntegerField()
+    currentLat=models.FloatField(default=None)
+    currentLongit=models.FloatField(default=None)
 
 class Truck(models.Model):
+    driver_id=models.ForeignKey(Driver,on_delete=models.CASCADE,default=1)
     make=models.CharField(max_length=100)
     model=models.CharField(max_length=200)
     registration_no=models.CharField(max_length=200)
     capacity=models.IntegerField()
-    prime_location=models.CharField(max_length=200)
     insured=models.BooleanField()
 
 class BookingDetails(models.Model):
