@@ -38,14 +38,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'transport.apps.TransportConfig'
-    
-    
+
+
     # 'django.contrib.sites',
 
     # 'allauth',
     # 'allauth.account',
     # 'allauth.socialaccount',
-    #  'allauth.socialaccount.providers.google', 
+    #  'allauth.socialaccount.providers.google',
 ]
 
 SITE_ID = 1
@@ -86,27 +86,27 @@ WSGI_APPLICATION = 'transportation_for_farmer.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-   'default': {  
-        'ENGINE': 'django.db.backends.mysql',  
-        'NAME': 'transport',  
-        'USER': 'Karina',  
-        'PASSWORD': 'TUHITU',  
-        'HOST': '127.0.0.1',  
-        'PORT': '3306',  
-        'OPTIONS': {  
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"  
-        }  
-    } 
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'crime_management',
+        'USER': 'anishmasand',
+        'PASSWORD': '123456789',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+        }
+    }
 }
 
 AUTHENTICATION_BACKENDS = [
-    
+
     # Needed to login by username in Django admin, regardless of `allauth`
-    #'django.contrib.auth.backends.ModelBackend',
+    # 'django.contrib.auth.backends.ModelBackend',
 
     # `allauth` specific authentication methods, such as login by e-mail
     'allauth.account.auth_backends.AuthenticationBackend',
-   
+
 ]
 
 

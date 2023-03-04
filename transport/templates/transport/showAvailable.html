@@ -13,10 +13,31 @@
     <link rel="stylesheet" href="{% static 'transport/style.css' %}">
 
     <title>Crop Transportation System</title>
+
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+    
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    </head>
 </head>
 
 <body>
 
+    
     <!--========== SCROLL TOP ==========-->
     <a href="#" class="scrolltop" id="scroll-top">
         <i class='bx bx-chevron-up scrolltop__icon'></i>
@@ -29,7 +50,7 @@
 
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                  
+
 
                     <li><i class='bx bx-moon change-theme' id="theme-button"></i></li>
                 </ul>
@@ -1051,74 +1072,133 @@
                     </svg>
                     <center>
                         <form action="">
-                       <a href="{% url 'showAvailable' %}" > <button id="share" class="button" >Current location</button></a>
-                        <pre id="result"></pre>
-                        <input type="text" placeholder="Destination" value="">
+                            <button id="share" class="button">Current location</button>
+                            <pre id="result"></pre>
+                            <h3>to</h3>
+                            <input type="text" placeholder="Destination" value="Ulhasnagar 1">
                         </form>
                     </center>
+                </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.9337126686582!2d73.15940391488968!3d19.241720486993014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be79418fd487acf%3A0xd312ea7f0555dc05!2sUlhasnagar%201%2C%20Sidhi%20Vinayak%20Nagar%2C%20Ulhasnagar%2C%20Maharashtra%20421001!5e0!3m2!1sen!2sin!4v1677900981258!5m2!1sen!2sin"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <center>
+                        <h2 class="home__subtitle">Available Trucks</h2>
+                    <table>
+               
+                       
+                        <tr>
+                            <th>Company</th>
+                            <th>Contact</th>
+                            <th>Price</th>
+                        </tr>
+                                <tr>
+                                    <td>2 wheeler</td>
+                                    <td>Chirag</td>
+                                    <td>
+                                        <a href="{% url 'paymentPage' %}">
+                                            400
+                                        </a>
+                                    </td>
+                                </tr>
+                        <tr>
+
+                            <td>Tata</td>
+                            <td>Ramesh</td>
+                            <td>
+                                <a href="{% url 'paymentPage' %}">
+                                    900
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mahindra</td>
+                            <td>Suresh</td>
+                                <td>
+                                    <a href="{% url 'paymentPage' %}">
+                                        1000
+                                    </a>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>Maruti</td>
+                            <td>Ronaldo</td>
+                                <td>
+                                    <a href="{% url 'paymentPage' %}">
+                                        1500
+                                    </a>
+                                </td>
+                        </tr>
+                        <tr>
+                            <td>Mahindra</td>
+                            <td>Messi</td>
+                            <td>
+                        <a href="{% url 'paymentPage' %}">
+                            1700
+                        </a>
+                        </td>
+                        </tr>
+                     
+                    </table>
+                </center>
+        </section>
+
+
+
+        <!--========== FOOTER ==========-->
+        <footer class="footer section bd-container">
+            <div class="footer__container bd-grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">Fresh Food</a>
+                    <span class="footer__description">Farmers Transportation</span>
+                    <div>
+                        <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
+                        <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
                     </div>
-                    <iframe class="svg__img svg__color home__img"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.418993411199!2d72.88447422239486!3d19.04530714586234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c8add9569a29%3A0xb7ad04bf9a389df7!2sVivekanand%20Education%20Society&#39;s%20Institute%20Of%20Technology%20(VESIT)!5e0!3m2!1sen!2sin!4v1677878088824!5m2!1sen!2sin"
-                        width="600" height="450" style="border:0; margin-bottom: 10%; border-radius: 7%;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    
-                    </div>
-                    </section>
-                    
-                    
-                    
-                    <!--========== FOOTER ==========-->
-                    <footer class="footer section bd-container">
-                        <div class="footer__container bd-grid">
-                            <div class="footer__content">
-                                <a href="#" class="footer__logo">Fresh Food</a>
-                                <span class="footer__description">Farmers Transportation</span>
-                                <div>
-                                    <a href="#" class="footer__social"><i class='bx bxl-facebook'></i></a>
-                                    <a href="#" class="footer__social"><i class='bx bxl-instagram'></i></a>
-                                    <a href="#" class="footer__social"><i class='bx bxl-twitter'></i></a>
-                                </div>
-                            </div>
-                    
-                            <div class="footer__content">
-                                <h3 class="footer__title">Services</h3>
-                                <ul>
-                                    <li><a href="#" class="footer__link">Delivery</a></li>
-                                    <li><a href="#" class="footer__link">Pricing</a></li>
-                                    <li><a href="#" class="footer__link">Fresh food</a></li>
-                                    <li><a href="#" class="footer__link">Make a booking</a></li>
-                                </ul>
-                            </div>
-                    
-                            <div class="footer__content">
-                                <h3 class="footer__title">Information</h3>
-                                <ul>
-                                    <li><a href="#" class="footer__link">Event</a></li>
-                                    <li><a href="#" class="footer__link">Contact us</a></li>
-                                    <li><a href="#" class="footer__link">Privacy policy</a></li>
-                                    <li><a href="#" class="footer__link">Terms of services</a></li>
-                                </ul>
-                            </div>
-                    
-                            <div class="footer__content">
-                                <h3 class="footer__title">Address</h3>
-                                <ul>
-                                    <li>Mumbai, India</li>
-                                    <li>Jr Union #999</li>
-                                    <li>999 - 888 - 777</li>
-                                    <li>freshfood@email.com</li>
-                                </ul>
-                            </div>
-                        </div>
-                    
-                        <p class="footer__copy">&#169; 2023. All right reserved</p>
-                    </footer>
-                    
-                    <!--========== SCROLL REVEAL ==========-->
-                    <script src="https://unpkg.com/scrollreveal"></script>
-                    
-                    <!--========== MAIN JS ==========-->
-                    <script src="{% static 'transport/main.js' %}" defer></script>
-                    </body>
-                    
-                    </html>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Services</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Delivery</a></li>
+                        <li><a href="#" class="footer__link">Pricing</a></li>
+                        <li><a href="#" class="footer__link">Fresh food</a></li>
+                        <li><a href="#" class="footer__link">Make a booking</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Information</h3>
+                    <ul>
+                        <li><a href="#" class="footer__link">Event</a></li>
+                        <li><a href="#" class="footer__link">Contact us</a></li>
+                        <li><a href="#" class="footer__link">Privacy policy</a></li>
+                        <li><a href="#" class="footer__link">Terms of services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Address</h3>
+                    <ul>
+                        <li>Mumbai, India</li>
+                        <li>Jr Union #999</li>
+                        <li>999 - 888 - 777</li>
+                        <li>freshfood@email.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; 2023. All right reserved</p>
+        </footer>
+
+        <!--========== SCROLL REVEAL ==========-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--========== MAIN JS ==========-->
+        <script src="{% static 'transport/main.js' %}" defer></script>
+</body>
+
+</html>
