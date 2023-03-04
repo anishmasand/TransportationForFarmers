@@ -24,6 +24,11 @@ def showPaymentPage(request):
 def showBookingPage(request):
     return render(request, "transport/bookingPage.html")
 
+<<<<<<< HEAD
+
+def showDriversInterface(request):
+    return render(request, "transport/driversInterface.html")
+=======
 def registerFarmer(request):
     fullname=request.POST['fullname']
     email=request.POST['email']
@@ -69,3 +74,4 @@ def authenticateDriver(request):
     if(response):
         return render(request,"transport/bookingPage.html")
     return render(request,"transport/errorPage.html")
+>>>>>>> 4b75e2e29510409485bf80811c3e11861371a95f
