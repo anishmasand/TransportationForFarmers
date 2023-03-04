@@ -12,7 +12,28 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 showMenu('nav-toggle','nav-menu')
+/*==================== Geolocation ====================*/
+const http = new XMLHttpRequest();
+let result = document.querySelector("#result");
 
+document.querySelector("#share").addEventListener("click", () => {
+  findMyCoordinates()
+})
+
+function findMyCoordinates() {
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition((position) => {
+       console.log(position.coords.latitude, position.coords.longitude)
+       const lat = position.coords.latitude;
+       const longi = position.coords.longitude;
+    },
+    (err) => { 
+      alert(err.message)
+    })
+  } else {
+    alert("Geolocation is not supported by your browser")
+  }
+}
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -97,7 +118,7 @@ const sr = ScrollReveal({
     reset: false
 });
 
-sr.reveal(`.home__data, .home__img,
+sr.reveal(`.home__data, .home__img, svg__img
             .about__data, .about__img,
             .services__content, .menu__content,
             .app__data, .app__img,

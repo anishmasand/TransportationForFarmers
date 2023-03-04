@@ -29,3 +29,7 @@ def showPaymentPage(request):
 
 def showBookingPage(request):
     return render(request, "transport/bookingPage.html")
+
+
+def showDriversInterface(request):
+    return render(request, "transport/driversInterface.html")

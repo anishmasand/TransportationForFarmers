@@ -9,5 +9,6 @@ urlpatterns = [
     path('signupPage', views.showSignupPage, name="signupPage"),
     path('paymentPage', views.showPaymentPage, name="paymentPage"),
     path('bookingPage', views.showBookingPage, name="bookingPage"),
+    path('driversInterface', views.showDriversInterface, name="driversInterface"),
     # path('accounts/', include('allauth.urls')),
 ]
